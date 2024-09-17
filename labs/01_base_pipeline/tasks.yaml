@@ -1,10 +1,10 @@
 apiVersion: tekton.dev/v1beta1
 kind: Task
-metadata:
+metadata:  
   name: hello-world
 spec:
   steps:
-    - name : echo
-      immage: alpine: 3
-      command: [/bin/echo]
+    - name: hello
+      image: gcr.io/cloud-builders/gcloud
+      command: ["echo"]
       args: ["Hello, World!"]
